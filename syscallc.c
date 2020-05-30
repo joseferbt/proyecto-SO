@@ -3,6 +3,11 @@
 #include "user.h"
 #include "syscallc.h"
 
+
+/*Callsnumber *crearLLamada(){
+    Callsnumber *nueva_struct = new Callsnumber();
+}*/
+
 void insertar(int pos)
 {
     for (int i = 1; i <= 22; i++)
@@ -17,25 +22,26 @@ void insertar(int pos)
 
 int main(int argc, char *argv[])
 {
+    
 
-    int nsyscall = -1;
-   // struct callsnumber r;
+        int nsyscall = -1;
+    // struct Callsnumber r;
     if (argc == 2)
     {
         nsyscall = atoi(argv[1]);
     }
 
+    
 
     else
     {
-        if (nsyscall == -1)
-        {
-
+        if (nsyscall == -1){}
+        
             //printf(2, "hola soy %d", r.write);
 
             // mostrar todas las llamadas al sistema
             // con su correspondiente numero de invocaciones
-        }
+        
         else
         {
             printf(2, "todas  las llamadas de %c", argv[2]);

@@ -1,6 +1,6 @@
 struct stat;
 struct rtcdate;
-struct callsnumber;
+struct Callsnumber;
 
 // system calls
 int fork(void);
@@ -25,7 +25,7 @@ char *sbrk(int);
 int sleep(int);
 int uptime(void);
 int date(struct rtcdate *);
-int syscallc(struct callsnumber *);
+int syscallc(struct Callsnumber *);
 
 // ulib.c
 int stat(const char *, struct stat *);

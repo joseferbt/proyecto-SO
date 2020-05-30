@@ -1,6 +1,5 @@
 // System call numbers
-#include "types.h"
-struct callsnumber
+struct Callsnumber
 {
     int valores[22];
     int fork;
@@ -27,4 +26,5 @@ struct callsnumber
     int date;
 };
 
-//void insertarLlamada( int cantidad);
+struct Callsnumber *crearLLamada();
+void insertarLlamada(struct Callsnumber *rr, int cantidad);

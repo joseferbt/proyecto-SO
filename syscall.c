@@ -127,7 +127,6 @@ static int (*syscalls[])(void) = {
     [SYS_date] sys_date,
 };
 
-callsnumber conteoDeLlamadas;
 
 void syscall(void)
 {
@@ -139,7 +138,7 @@ void syscall(void)
   {
     curproc->tf->eax = syscalls[num]();
     cprintf(" hola soy sys call:  %d\n", num);
-    insertarLlamada(num);
+    //insertarLlamada(num);
   }
   else
   {

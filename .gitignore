@@ -40,3 +40,4 @@ CMakeLists.txt
 .idea/proyecto-SO.iml
 .idea/vcs.xml
 .idea/workspace.xml
+*.log

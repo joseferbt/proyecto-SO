@@ -25,7 +25,7 @@ char *sbrk(int);
 int sleep(int);
 int uptime(void);
 int date(struct rtcdate *);
-int callsnumber(struct callsnumber *);
+int syscallc(struct callsnumber *);
 
 // ulib.c
 int stat(const char *, struct stat *);

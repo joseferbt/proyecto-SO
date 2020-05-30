@@ -187,6 +187,12 @@ fill_rtcdate(struct rtcdate *r)
   r->year = cmos_read(YEAR);
 }
 
+static void
+fill_calls(struct callsnumber *rr)
+{
+  rr->exit=0;
+}
+
 // qemu seems to use 24-hour GWT and the values are BCD encoded
 void cmostime(struct rtcdate *r)
 {

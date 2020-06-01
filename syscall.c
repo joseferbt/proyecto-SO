@@ -135,8 +135,12 @@ void fill_llamadas(struct Callsnumber *rrr)
 
  // struct Callsnumber t1;
  // *rrr = t1;
-
-  rrr->valores[0] = 10;
+  for (uint i = 0; i < 22; i++)
+  {
+    rrr->valores[i] = 0;
+  }
+  
+  
   rrr->fork = 0;
   rrr->exit = 0;
   rrr->wait = 0;
@@ -161,6 +165,10 @@ void fill_llamadas(struct Callsnumber *rrr)
   rrr->date = 0;
 }
 
+void insertarLlamada(struct Callsnumber *rrr, int id){
+  rrr->valores[id]++;
+}
+
 void syscall(void)
 {
   if(veces == 0){
@@ -175,7 +183,7 @@ void syscall(void)
   if (num > 0 && num < NELEM(syscalls) && syscalls[num])
   {
     curproc->tf->eax = syscalls[num]();
-    
+    insertarLlamada(&rr,num );
     //cprintf(" hola soy sys call:  %d\n", num);
     //insertarLlamada(num);
   }

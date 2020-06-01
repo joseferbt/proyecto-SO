@@ -103,6 +103,7 @@ extern int sys_wait(void);
 extern int sys_write(void);
 extern int sys_uptime(void);
 extern int sys_date(void);
+extern int sys_syscallc(void);
 
 static int (*syscalls[])(void) = {
     [SYS_fork] sys_fork,
@@ -127,12 +128,13 @@ static int (*syscalls[])(void) = {
     [SYS_mkdir] sys_mkdir,
     [SYS_close] sys_close,
     [SYS_date] sys_date,
+    [SYS_syscallc] sys_syscallc
 };
 void fill_llamadas(struct Callsnumber *rrr)
 {
 
-  struct Callsnumber t1;
-  *rrr = t1;
+ // struct Callsnumber t1;
+ // *rrr = t1;
 
   rrr->valores[0] = 10;
   rrr->fork = 0;

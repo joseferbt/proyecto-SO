@@ -12,37 +12,21 @@ void verLlamadas(struct Callsnumber *rrr){
     printf(2, "hola, soy: %d", rrr->dup);
 }
 
-
-int main(int argc, char *argv[])
+int
+main(int argc, char *argv[])
 {
-    
+struct Callsnumber r;
+syscallc(&r);
 
-        int nsyscall = -1;
-    // struct Callsnumber r;
-    if (argc == 2)
-    {
-        nsyscall = atoi(argv[1]);
-    }
-
-    
-
-    else
-    {
-        if (nsyscall == -1){
-            verLlamadas(&rr);
-        }
-        
-
-            // mostrar todas las llamadas al sistema
-            // con su correspondiente numero de invocaciones
-        
-        else
-        {
-            printf(2, "todas  las llamadas de %c", argv[2]);
-            // mostrar la llamada al sistema dada en nsyscall
-            // con su correspondiente numero de invocaciones
-        }
-    }
-
-    exit();
+ int nsyscall = -1;
+ if (argc == 2) {
+  nsyscall = atoi(argv[1]);
+ }
+ if (nsyscall == -1) {
+  verLlamadas(&r);
+ } else {
+  printf(2, "hola, soy %s ", argv[1]);
+ }
+ exit();
 }
+

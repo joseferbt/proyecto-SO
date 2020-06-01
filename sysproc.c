@@ -2,6 +2,7 @@
 #include "x86.h"
 #include "defs.h"
 #include "date.h"
+#include "syscallc.h"
 #include "param.h"
 #include "memlayout.h"
 #include "mmu.h"
@@ -96,5 +97,14 @@ struct rtcdate *r;
   if(argptr(0, (void*)&r, sizeof(&r)) < 0)
     return -1;
   cmostime(r);
+  return 0;
+}
+int 
+sys_syscallc(void)
+{
+struct Callsnumber *r;
+  if(argptr(0, (void*)&r, sizeof(&r)) < 0)
+    return -1;
+  *r = rr;
   return 0;
 }

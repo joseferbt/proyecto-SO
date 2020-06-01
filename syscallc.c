@@ -7,18 +7,11 @@
 /*Callsnumber *crearLLamada(){
     Callsnumber *nueva_struct = new Callsnumber();
 }*/
-
-void insertar(int pos)
-{
-    for (int i = 1; i <= 22; i++)
-    {
-        if (i == 16)
-        {
-            /* code */
-        }
-
-    }
+void verLlamadas(struct Callsnumber *rrr){
+    printf(2, "hola, soy: %d", rrr->valores[0]);
+    printf(2, "hola, soy: %d", rrr->dup);
 }
+
 
 int main(int argc, char *argv[])
 {
@@ -35,9 +28,10 @@ int main(int argc, char *argv[])
 
     else
     {
-        if (nsyscall == -1){}
+        if (nsyscall == -1){
+            verLlamadas(&rr);
+        }
         
-            //printf(2, "hola soy %d", r.write);
 
             // mostrar todas las llamadas al sistema
             // con su correspondiente numero de invocaciones

@@ -8,6 +8,7 @@
 #include "syscall.h"
 #include "syscallc.h"
 
+
 // User code makes a system call with INT T_SYSCALL.
 // System call number in %eax.
 // Arguments on the stack, from the user call to the C
@@ -15,6 +16,7 @@
 // to a saved program counter, and then the first argument.
 
 // Fetch the int at addr from the current process.
+int veces = 0;
 int fetchint(uint addr, int *ip)
 {
   struct proc *curproc = myproc();
@@ -126,10 +128,44 @@ static int (*syscalls[])(void) = {
     [SYS_close] sys_close,
     [SYS_date] sys_date,
 };
+void fill_llamadas(struct Callsnumber *rrr)
+{
 
+  struct Callsnumber t1;
+  *rrr = t1;
+
+  rrr->valores[0] = 10;
+  rrr->fork = 0;
+  rrr->exit = 0;
+  rrr->wait = 0;
+  rrr->pipe = 0;
+  rrr->read = 0;
+  rrr->kill = 0;
+  rrr->exec = 0;
+  rrr->fstat = 0;
+  rrr->chdir = 0;
+  rrr->dup = 8;
+  rrr->getpi = 0;
+  rrr->sbrk = 0;
+  rrr->sleep = 0;
+  rrr->uptim = 0;
+  rrr->open = 0;
+  rrr->write = 0;
+  rrr->mknod = 0;
+  rrr->unlin = 0;
+  rrr->link = 0;
+  rrr->mkdir = 0;
+  rrr->close = 0;
+  rrr->date = 0;
+}
 
 void syscall(void)
 {
+  if(veces == 0){
+    fill_llamadas(&rr);
+    veces = 1;
+    
+  }
   int num;
   struct proc *curproc = myproc();
 
@@ -137,7 +173,8 @@ void syscall(void)
   if (num > 0 && num < NELEM(syscalls) && syscalls[num])
   {
     curproc->tf->eax = syscalls[num]();
-    cprintf(" hola soy sys call:  %d\n", num);
+    
+    //cprintf(" hola soy sys call:  %d\n", num);
     //insertarLlamada(num);
   }
   else

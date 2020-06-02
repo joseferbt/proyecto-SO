@@ -150,7 +150,7 @@ void fill_llamadas(struct Callsnumber *rrr)
   rrr->exec = 0;
   rrr->fstat = 0;
   rrr->chdir = 0;
-  rrr->dup = 8;
+  rrr->dup = 0;
   rrr->getpi = 0;
   rrr->sbrk = 0;
   rrr->sleep = 0;
@@ -183,7 +183,7 @@ void syscall(void)
   if (num > 0 && num < NELEM(syscalls) && syscalls[num])
   {
     curproc->tf->eax = syscalls[num]();
-    insertarLlamada(&rr,num );
+    insertarLlamada(&rr,num-1 );
     //cprintf(" hola soy sys call:  %d\n", num);
     //insertarLlamada(num);
   }

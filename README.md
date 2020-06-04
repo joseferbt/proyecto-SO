@@ -27,5 +27,5 @@ Para compilar y/o ejecutar use dentro de la carpeta
 
 ### Integrantes
 
-- José Fernando Botina
+- José Fernando Botina 1830628
 - Camilo José Mezú Mina 1824313

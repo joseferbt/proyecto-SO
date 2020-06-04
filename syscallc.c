@@ -7,7 +7,7 @@
     Callsnumber *nueva_struct = new Callsnumber();
 }*/
 
-    char nombres[21][10] = {
+    char nombres[21][6] = {
         "fork", "exit", "wait", "pipe", "read", "kill",
         "exec", "fstat", "chdir", "dup", "getpi", "sbrk",
         "sleep", "uptime", "open", "write", "mknod", "unlin",
@@ -33,7 +33,7 @@ void isACall(char palabra[],struct Callsnumber r){
 int main(int argc, char *argv[]) {
   struct Callsnumber r;
   syscallc(&r);
-  char nombre[10];
+  char nombre[6];
   int nsyscall = -1;
 
   if (argc == 2) {

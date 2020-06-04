@@ -140,30 +140,7 @@ void fill_llamadas(struct Callsnumber *rrr)
   {
     rrr->valores[i] = 0;
   }
-  
-  
-  rrr->fork = 0;
-  rrr->exit = 0;
-  rrr->wait = 0;
-  rrr->pipe = 0;
-  rrr->read = 0;
-  rrr->kill = 0;
-  rrr->exec = 0;
-  rrr->fstat = 0;
-  rrr->chdir = 0;
-  rrr->dup = 0;
-  rrr->getpi = 0;
-  rrr->sbrk = 0;
-  rrr->sleep = 0;
-  rrr->uptim = 0;
-  rrr->open = 0;
-  rrr->write = 0;
-  rrr->mknod = 0;
-  rrr->unlin = 0;
-  rrr->link = 0;
-  rrr->mkdir = 0;
-  rrr->close = 0;
-  rrr->date = 0;
+ 
 }
 
 void insertarLlamada(struct Callsnumber *rrr, int id){

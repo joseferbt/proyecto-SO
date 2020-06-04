@@ -89,7 +89,7 @@ if(argptr(0, (void*)&r, sizeof(&r)) < 0)
     return -1;
   cmostime(r);
 
-cprintf("%d:%d:%d up %d:%d:%d",r->hour,r->minute,r->second,r->hour-inicial.hour,r->minute-inicial.minute,r->second-inicial.second);
+cprintf("%d:%d:%d up %d:%d:%d \n",r->hour,r->minute,r->second,r->hour-inicial.hour,r->minute-inicial.minute,r->second-inicial.second);
 
  /* uint xticks;
   acquire(&tickslock);

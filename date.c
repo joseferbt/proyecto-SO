@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
     exit();
   }
 
-  printf(2, "%d:%d:%d de %d/%d/%d", r.hour, r.minute, r.second, r.day, r.month, r.year);
+  printf(2, "%d:%d:%d de %d/%d/%d \n", r.hour, r.minute, r.second, r.day, r.month, r.year );
 
   exit();
 }

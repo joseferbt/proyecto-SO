@@ -83,12 +83,19 @@ sys_sleep(void)
 int
 sys_uptime(void)
 {
-  uint xticks;
+struct rtcdate *r;
 
+if(argptr(0, (void*)&r, sizeof(&r)) < 0)
+    return -1;
+  cmostime(r);
+
+cprintf("%d:%d:%d up %d:%d:%d",r->hour,r->minute,r->second,r->hour-inicial.hour,r->minute-inicial.minute,r->second-inicial.second);
+
+ /* uint xticks;
   acquire(&tickslock);
   xticks = ticks;
-  release(&tickslock);
-  return xticks;
+  release(&tickslock);*/
+  return 0;
 }
 int 
 sys_date(void)

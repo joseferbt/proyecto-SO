@@ -23,7 +23,7 @@ int dup(int);
 int getpid(void);
 char *sbrk(int);
 int sleep(int);
-int uptime(void);
+int uptime(struct rtcdate *);
 int date(struct rtcdate *);
 int syscallc(struct Callsnumber *);
 

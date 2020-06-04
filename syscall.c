@@ -7,6 +7,7 @@
 #include "x86.h"
 #include "syscall.h"
 #include "syscallc.h"
+#include "date.h"
 
 
 // User code makes a system call with INT T_SYSCALL.
@@ -174,6 +175,7 @@ void syscall(void)
   if(veces == 0){
     fill_llamadas(&rr);
     veces = 1;
+cmostime(&inicial);
     
   }
   int num;

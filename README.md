@@ -22,10 +22,10 @@ Para compilar y/o ejecutar use dentro de la carpeta
 | :------------ |:---------------:| -----:|
 |`date`     | muestra la fecha actual. | N/A |
 |     ` syscallc`   | muesta todas las llamadas a sistema disponibles y la cantidad de veces que fue ejecutada cada una        |   Como parametro recibe el nombre de cualquier llamada para ver cuantas veces fue ejecutada |
-| uptime | Muestra la hora y el tiempo que lleva encendido el sistema        |  N/A |
+| `uptime` | Muestra la hora y el tiempo que lleva encendido el sistema        |  N/A |
 
 
 ### Integrantes
+
 - José Fernando Botina
-- Julian Alvarez
 - Camilo José Mezú Mina 1824313

@@ -1,9 +1,10 @@
-#Proyecto de OS 2019-2
+# Proyecto de OS 2019-2
+
 El presente proyecto es una modificacion al sistema [xv6](https://github.com/mit-pdos/xv6-public).
 
 El sistema operativo XV6 fue desarrollado en el MIT en el verano del 2006. El software se desarrolló con fines netamente académicos y provee el esqueleto básico de un sistema operativo funcional con la posibilidad de ser extendido. El software puede ser descargado a través de git y requiere de algunas herramientas de desarrollo adicionales que se describirán a continuación.
 
-##Preparacion del ambiente
+## Preparacion del ambiente
 Debe estar en un ambiente unix que con el emulador qemu instalado, preferiblemente ubuntu o un linux con kernel LTS
 
 Para ubuntu sería
@@ -15,7 +16,7 @@ Para compilar y/o ejecutar use dentro de la carpeta
 `make && make qemu-nox`
 
 
-###Comandos agregados
+### Comandos agregados
 
 | Comando  | Descripcion | Parametros|
 | :------------ |:---------------:| -----:|
@@ -24,7 +25,7 @@ Para compilar y/o ejecutar use dentro de la carpeta
 | uptime | Muestra la hora y el tiempo que lleva encendido el sistema        |  N/A |
 
 
-###Integrantes
+### Integrantes
 - José Fernando Botina
 - Julian Alvarez
 - Camilo José Mezú Mina 1824313
